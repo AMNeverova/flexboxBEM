@@ -1,0 +1,26 @@
+/* colors */
+
+$purple: #9B51E0;
+$orange: #FFC740;
+$footer_purple: #6d3d99;
+
+/* mixins */
+
+@mixin article__heading-before {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    margin-right: 0.1rem;
+    background-color: $purple;
+
+}
+
+@mixin article__heading-after {
+    content: '';
+    display: block;
+    margin-left: 0.1rem;
+    flex-grow: 1;
+    background-color: $purple;
+
+}
