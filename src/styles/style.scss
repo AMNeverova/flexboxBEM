@@ -65,9 +65,8 @@ body {
         padding: 0;
         box-sizing: border-box;
       }
-
       .search-form__button-go {
-        background-color: $purple;
+        background-color: $dark_purple;
         width: 2.5rem;
         height: 2rem;
         color: #ffffff;
@@ -228,13 +227,14 @@ body {
     .logos {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       .clients__logo {
           margin: 0 1rem 1rem;
       }
     }
   }
   .footer {
-      background-color: $footer_purple;
+      background-color: $dark_purple;
       height: 7rem;
       display: flex;
       justify-content: center;
@@ -247,3 +247,6 @@ body {
       }
   }
 }
+
+@import "style970";
+@import "style590";

@@ -1,0 +1,30 @@
+@media screen and (max-width: 590px) {
+  body {
+    .container {
+      .header {
+        .navbar {
+          flex-wrap: wrap;
+          .navbar__link {
+            height: 2rem;
+            font-size: 0.8rem;
+            padding-top: 0.5rem;
+            flex-basis: 25%;
+          }
+        }
+      }
+      .main-article {
+        .main-article__heading {
+          width: 100%;
+        }
+      }
+      .articles {
+        .article_sixth {
+            justify-content: center;
+          .post {
+            flex-basis: 70%;
+          }
+        }
+      }
+    }
+  }
+}
