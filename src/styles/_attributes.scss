@@ -3,6 +3,8 @@
 $purple: #9B51E0;
 $orange: #FFC740;
 $dark_purple: #6d3d99;
+$border_grey: #c4c4c4;
+$white: #ffffff;
 
 /* mixins */
 
@@ -24,3 +26,17 @@ $dark_purple: #6d3d99;
     background-color: $purple;
 
 }
+
+/* font-face */
+
+@font-face {
+    font-family: "robotoregular";
+    src: url("../font/roboto-regular-webfont.woff2") format("woff2"),
+      url("../font/roboto-regular-webfont.woff") format("woff"), url("../font/roboto-regular-webfont.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* images */
+
+$mountains-and-goats: url("../imgs/Mountains-and-hills.png");
