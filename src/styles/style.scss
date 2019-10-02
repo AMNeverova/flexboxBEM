@@ -21,12 +21,16 @@ body {
         font-weight: bold;
         font-size: 1.5rem;
         display: flex;
-        .header__logo__text {
+        .logo__text {
           margin: 0;
           position: relative;
           top: 0.8rem;
           z-index: 1;
           left: -1.5rem;
+          transition: left 2s ease-in-out;
+        }
+        .logo__text:hover {
+          left: 1.5rem;
         }
       }
       .header__logo:before {
@@ -38,6 +42,9 @@ body {
         border: 3px solid $orange;
         z-index: -1;
       }
+      .header__logo:hover:before {
+        animation: rotate 2s linear 1s 2 alternate;
+      }
       .header__logo:after {
         content: "";
         display: block;
@@ -48,14 +55,22 @@ body {
         left: -11rem;
         background-color: $white;
         z-index: 0;
+        transition: left 2s ease-in-out;
+      }
+      .header__logo:hover:after {
+        left: -6rem;
       }
       .search-form__input-text {
         border: 1px solid $purple;
         border-right: none;
         height: 2rem;
-        width: 13.5rem;
+        width: 10rem;
         padding: 0;
         box-sizing: border-box;
+        transition: width 2s;
+      }
+      .search-form__input-text:focus {
+        width: 13rem;
       }
       .search-form__button-go {
         background-color: $dark_purple;
@@ -83,7 +98,6 @@ body {
           padding-top: 1rem;
           box-sizing: border-box;
         }
-
         .navbar__link_active {
           @extend .navbar__link;
           color: $white;
@@ -103,7 +117,7 @@ body {
         height: 1rem;
       }
       .heading__text {
-        margin: 0;
+        margin: 0 0.2rem;
       }
       .heading:before {
         @include article__heading-before;
@@ -115,6 +129,30 @@ body {
       .heading_orange:after {
         background-color: $orange;
       }
+      .article__content {
+        flex-basis: 65%;
+        padding-left: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.75rem;
+        line-height: 0.9rem;
+        .article__text {
+          margin: 0;
+          text-align: justify;
+          flex-basis: 100%;
+          align-self: flex-start;
+        }
+        .article__link-read-more {
+          color: #000000;
+          flex-basis: 100%;
+          align-self: flex-end;
+        }
+        .article__author {
+          align-self: flex-end;
+          margin: 0;
+        }
+      }
+
     }
     .main-article {
       background-image: $mountains-and-goats;
@@ -161,29 +199,6 @@ body {
           border: 2px solid $white;
           box-sizing: border-box;
         }
-        .article__content {
-          flex-basis: 65%;
-          padding-left: 1rem;
-          display: flex;
-          flex-wrap: wrap;
-          font-size: 0.75rem;
-          line-height: 0.9rem;
-          .article__text {
-            margin: 0;
-            text-align: justify;
-            flex-basis: 100%;
-            align-self: flex-start;
-          }
-          .article__link-read-more {
-            color: #000000;
-            flex-basis: 100%;
-            align-self: flex-end;
-          }
-          .article__author {
-            align-self: flex-end;
-            margin: 0;
-          }
-        }
       }
       .article_small {
         flex-basis: 31%;
@@ -222,6 +237,44 @@ body {
       flex-wrap: wrap;
       .clients__logo {
           margin: 0 1rem 1rem;
+      }
+      .html-logo, .css-logo, .node-logo, .php-logo, .sql-logo {
+        position: relative;
+        animation: wave 1s linear 2s;
+      }
+      .css-logo {
+        animation: wave 1s linear 2.2s;
+      }
+      .node-logo {
+        animation: wave 1s linear 2.4s;
+      }
+      .php-logo {
+        animation: wave 1s linear 2.6s;
+      }
+      .sql-logo {
+        animation: wave 1s linear 2.8s;
+      }
+    }
+    .video-article {
+      display: flex;
+      flex-wrap: wrap;
+      flex-basis: 49%;
+      height: 12rem;
+      .article__content {
+        flex-basis: 50%;
+      }
+      .video {
+        align-self: flex-start;
+      }
+      .audio {
+        width: 100%;
+      }
+    }
+    .audio-article {
+      @extend .video-article;
+      .article__content {
+        flex-basis: 100%;
+        padding-left: 0;
       }
     }
   }
