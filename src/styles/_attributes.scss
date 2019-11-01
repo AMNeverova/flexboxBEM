@@ -5,6 +5,7 @@ $orange: #FFC740;
 $dark_purple: #6d3d99;
 $border_grey: #c4c4c4;
 $white: #ffffff;
+$audio-grey: #f4f1f3;
 
 /* mixins */
 
@@ -40,3 +41,31 @@ $white: #ffffff;
 /* images */
 
 $mountains-and-goats: url("../imgs/Mountains-and-hills.png");
+
+/* keyframes */
+
+@keyframes wave {
+  0%, 100% {
+    top: 0;
+  }
+  50% {
+    top: -1.2rem;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  25% {
+    transform: rotateY(45deg);
+  }
+  50% {
+    transform: rotateY(90deg);
+  }
+  75% {
+    transform: rotateY(135deg)
+  }
+  100% {
+    transform: rotateY(180deg)
+  }
+}
