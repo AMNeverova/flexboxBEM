@@ -1,0 +1,62 @@
+@media screen and (max-width: 970px) {
+  html {
+    font-size: 0.9rem;
+  }
+  body {
+    .container {
+      width: inherit;
+      margin: 0;
+      .main-article {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        .main-article__heading {
+          width: 80%;
+        }
+        .main-article__text {
+          width: 65%;
+        }
+      }
+      .articles {
+        .article {
+          flex-basis: 100%;
+          justify-content: center;
+
+          .article__content {
+            flex-basis: 45%;
+          }
+
+          .article__image {
+            flex-basis: 20%;
+          }
+
+          .post {
+            flex-basis: 32%;
+          }
+        }
+        .article_second {
+          order: -1;
+        }
+        .article_sixth {
+          order: 1;
+          justify-content: space-between;
+        }
+        .article_seventh,
+        .article_fifth {
+          flex-basis: 45%;
+          .article__content {
+            flex-basis: 100%;
+            height: 8rem;
+          }
+        }
+      }
+
+      .logos {
+        .clients__logo {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
