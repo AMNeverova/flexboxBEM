@@ -14,7 +14,7 @@
     <div class="container">
         <header class="header">
             <div class="header__logo">
-                <p class="header__logo__text">super logo</p>
+                <p class="logo__text">super logo</p>
             </div>
             <form class="search-form">
                 <input type="text" class="search-form__input-text">
@@ -174,24 +174,58 @@
                         <a href="#" class="article__link-read-more">Read more...</a>
                     </div>
                 </article>
+                <div class="video-article">
+                    <div class="heading heading-orange">video about</div>
+                    <video id='vido' poster='./src/imgs/ivolga.jpeg' class='video' width='200' controls>
+                        <source src='./src/video/ivolga.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        <source src="./src/video/ivolga.webm" type='video/webm; codecs="vp8, vorbis"'>
+                        <p class="unavailable">Lorem ipsum dolor sit amet</p>
+                    </video>
+                    <div class="article__content">
+                        <p class="article__text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam
+                            massa, dignissim at nisi nec, iaculis molestie leo.
+                            Aenean hendrerit pretium enim quis rutrum. Pellentesque mattis sem a efficitur auctor.
+                            Sed vulputate vitae dui non fermentum. Donec non sem dignissim, tincidunt arcu eget,
+                            posuere tellus.
+                            Quisque consectetur diam id faucibus sagittis. Praesent placerat, diam non sollicitudin
+                            suscipit, eros erat
+                        </p>
+                        <a href="#" class="article__link-read-more">Read more...</a>
+                    </div>
+                </div>
+                <div class="audio-article">
+                    <div class="heading heading_orange">audio about</div>
+                    <audio class="audio" controls src='./src/audio/ivolga.mp3'></audio>
+                    <div class="article__content">
+                        <p class="article__text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam
+                            massa, dignissim at nisi nec, iaculis molestie leo.
+                            Aenean hendrerit pretium enim quis rutrum. Pellentesque mattis sem a efficitur auctor.
+                            Sed vulputate vitae dui non fermentum. Donec non sem dignissim, tincidunt arcu eget,
+                            posuere tellus.
+                            Quisque consectetur diam id faucibus sagittis. Praesent placerat, diam non sollicitudin
+                            suscipit, eros erat
+                        </p>
+                        <a href="#" class="article__link-read-more">Read more...</a>
+                    </div>
+                </div>
             </div>
             <div class="clients">
                 <h4 class="heading heading_purple">
                     <p class="heading__text">clients</p>
                 </h4>
                 <div class="logos">
-                    <img src="./src/imgs/html5.png" alt="html5" class="clients__logo">
-                    <img src="./src/imgs/css3.png" alt="css3" class="clients__logo">
-                    <img src="./src/imgs/nodejs.png" alt="nodejs" class="clients__logo">
-                    <img src="./src/imgs/php.png" alt="php" class="clients__logo">
-                    <img src="./src/imgs/mysql.png" alt="MySQL" class="clients__logo">
+                    <img src="./src/imgs/html5.png" alt="html5" class="clients__logo html-logo">
+                    <img src="./src/imgs/css3.png" alt="css3" class="clients__logo css-logo">
+                    <img src="./src/imgs/nodejs.png" alt="nodejs" class="clients__logo node-logo">
+                    <img src="./src/imgs/php.png" alt="php" class="clients__logo php-logo">
+                    <img src="./src/imgs/mysql.png" alt="MySQL" class="clients__logo sql-logo">
                 </div>
             </div>
         </div>
     </div>
-    <footer class="footer">
-        <p class="footer__text">Copyright &copy; Lodoss Team 2018</p>
-    </footer>
+        <footer class="footer">
+            <p class="footer__text">Copyright &copy; Lodoss Team 2018</p>
+        </footer>
 </body>
 
 </html>
