@@ -187,7 +187,7 @@ body {
     .articles {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: center;
       .article {
         margin: 0 0.5rem 0.5rem 0.5rem;
         flex-basis: 48%;
@@ -256,9 +256,10 @@ body {
       }
     }
     .video-article {
+      margin: 0 0.5rem 0.5rem 0.5rem;
       display: flex;
       flex-wrap: wrap;
-      flex-basis: 49%;
+      flex-basis: 48%;
       height: 12rem;
       .article__content {
         flex-basis: 50%;
