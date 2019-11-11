@@ -1,14 +1,25 @@
 import './src/styles/style.scss';
 
-fetch('https://baconipsum.com/api/?type=all-meat&paras=6').then(response => response.json()).then(response => {
-    let articles = response;
+const getNewArticles = async function () {
+    try {
+        let response= await fetch('https://baconipsum.com/api/?type=all-meat&paras=6');
+        let articles = await response.json();
+        return articles
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+getNewArticles()
+.then (data => {
+    let articles = data;
     const articlesSegment = document.querySelector('.articles');
     articles.forEach((text, index) => {
         let textToPaste = text;
         if (textToPaste.length > 410) {
             textToPaste = text.slice(0, 410)
         }
-        let article = createArticle(textToPaste, index);    
+        let article = createArticle(textToPaste, index);
         articlesSegment.append(article);
     })
 })
