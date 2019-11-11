@@ -1,8 +1,15 @@
 import './src/styles/style.scss';
 
-fetch('https://baconipsum.com/api/?type=all-meat&paras=6').then(response => response.json()).then(response => {
-    let articles = response;
+let promiseWithArticles = new Promise( (resolve, reject) => {
+    fetch('https://baconipsum.com/api/?type=all-meat&paras=6')
+    .then(response => response.json())
+    .then( response => resolve(response))
+    .catch( er => reject(new Error(er)))
+})
+
+promiseWithArticles.then( data => {
     const articlesSegment = document.querySelector('.articles');
+    let articles = data;
     articles.forEach((text, index) => {
         let textToPaste = text;
         if (textToPaste.length > 410) {
